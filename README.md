@@ -5,34 +5,26 @@ This repository is my submission for the **Canton Network "Code Your Meme"** eve
 ---
 
 ## 🧠 About
-A light-hearted "developer meme" coded entirely in HTML — no images, no GIFs, just code.  
+A light-hearted "developer meme" coded entirely in HTML and CSS — no external images required.  
 Inspired by the daily struggles of developers working with **DAML** smart contracts on **Canton Network**.
 
 ---
 
 ## 💡 Meme Concept
 When your contract finally compiles...  
-but Canton throws a **RuntimeError** because your **party isn’t authorized** 🤯  
+but Canton throws a **RuntimeError** because your **party isn’t authorized** 🤯
 
 Sometimes, success is just one permission away 😅
 
 ---
 
-## 🧱 How it Works
-This meme is built using **pure HTML and CSS** to simulate a terminal screen.  
-It’s hosted live on GitHub Pages as part of the challenge.
+## 🔗 Live Meme
+The meme is hosted via **GitHub Pages**:  
+`https://pakjiinvp059.github.io/pakjiinvp059/`
 
-🔗 **Live Meme:** [Click here to view on GitHub Pages](https://pakjiinvp059.github.io/pakjiinvp059/)
-
----
-
-## 🐦 Social Post
-> “When your DAML contract compiles but production says:  
-> ❌ *Party not authorized!* 😭  
-> #CodeYourMeme @CantonNetwork”
+*(If the page doesn't show immediately, wait 1-3 minutes after your last commit, then refresh.)*
 
 ---
 
-## ⚙️ Author
-GitHub: [@pakjiinvp059](https://github.com/pakjiinvp059)  
-Canton Network Meme Participant 🚀
+## 🐦 Social Post (ready to copy)
+**English:**
