@@ -1,79 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Code Your Meme — Canton Network</title>
+
+  <!-- Social preview meta (Twitter/X) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="When your DAML contract compiles but prod says NO">
+  <meta name="twitter:description" content="My CodeYourMeme entry for Canton Network — dev life, DAML & Canton.">
+  <meta name="twitter:image" content="meme-preview.png">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      background-color: #0e0e10;
-      color: #00ff90;
-      font-family: "Courier New", monospace;
-      margin: 0;
-      padding: 50px;
+    :root{
+      --bg-1: #020407;
+      --bg-2: #071017;
+      --card: rgba(255,255,255,0.02);
+      --accent: #4fe7d8;
+      --muted: #9fb6c3;
+      --success: #7ef7a3;
+      --error: #ff7b77;
+    }
+
+    html,body{ height:100%; margin:0; padding:0; background: linear-gradient(180deg,var(--bg-1),var(--bg-2)); font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color:var(--muted); }
+
+    .page {
+      max-width:1100px;
+      margin:40px auto;
+      padding: 24px;
+    }
+
+    header{ text-align:center; margin-bottom:26px; }
+    header h1{
+      font-family: 'JetBrains Mono', monospace;
+      color:var(--accent);
+      margin:0;
+      font-size:26px;
+      letter-spacing:1px;
+    }
+    header p.lead{
+      margin:8px 0 0 0;
+      color:#9ccfe3;
+      font-size:14px;
+    }
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.018), rgba(255,255,255,0.01));
+      border-radius:16px;
+      padding:28px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+      border: 1px solid rgba(79,231,216,0.04);
+    }
+
+    /* decorative confetti bar */
+    .confetti {
+      height:8px;
+      border-radius:8px;
+      margin-bottom:18px;
+      background-image: linear-gradient(90deg, rgba(255,255,255,0.02) 0 8%, transparent 8% 16%);
+      box-shadow: inset 0 0 28px rgba(79,231,216,0.02);
     }
 
     .terminal {
-      background-color: #1a1a1d;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 0 15px rgba(0, 255, 150, 0.3);
+      background: linear-gradient(180deg, rgba(0,0,0,0.55), rgba(10,10,10,0.6));
+      padding:30px;
+      border-radius:12px;
+      color:#c7ffe6;
+      font-family: 'JetBrains Mono', monospace;
+      line-height:1.8;
+      box-shadow: 0 8px 30px rgba(0,255,200,0.03), inset 0 0 28px rgba(0,255,150,0.02);
+      border: 1px solid rgba(0,255,140,0.03);
     }
 
-    .prompt {
-      color: #00ffaa;
-    }
-
-    .error {
-      color: #ff5c5c;
-      font-weight: bold;
-    }
-
-    .success {
-      color: #00ff90;
-    }
+    .prompt{ color:#29ffab; }
+    .success{ color:var(--success); font-weight:600; }
+    .error{ color:var(--error); font-weight:700; }
 
     .caption {
-      margin-top: 40px;
-      font-style: italic;
-      color: #ccc;
-      text-align: center;
+      margin-top:28px;
+      text-align:center;
+      font-style:italic;
+      color:#b9cbd6;
+      font-size:16px;
     }
 
-    .footer {
-      text-align: center;
-      color: #6fd1ff;
-      margin-top: 20px;
-      font-size: 14px;
+    .meta {
+      margin-top:14px;
+      text-align:center;
+      color:#79c8df;
+      font-size:13px;
     }
 
-    h1 {
-      color: #00ffd5;
-      text-align: center;
-      font-size: 24px;
-      margin-bottom: 40px;
+    footer { text-align:center; margin-top:22px; color:#7daec6; font-size:13px; }
+
+    /* small responsive tweaks */
+    @media (max-width:720px){
+      .page{ padding:16px; margin:18px auto; }
+      header h1{ font-size:20px; }
+      .terminal{ padding:18px; font-size:15px; }
     }
   </style>
 </head>
 <body>
-  <h1>🧑‍💻 Code Your Meme — Canton Network Challenge</h1>
+  <div class="page">
+    <header>
+      <h1>🧑‍💻 Code Your Meme — Canton Network Challenge</h1>
+      <p class="lead">A tiny developer meme rendered with HTML/CSS — pure code, pure vibes.</p>
+    </header>
 
-  <div class="terminal">
-    <p class="prompt">&gt; canton compile main.daml</p>
-    <p>Compiling...</p>
-    <p class="success">✅ Compilation successful.</p>
-    <br>
-    <p class="prompt">&gt; canton run test</p>
-    <p class="error">❌ RuntimeError: Party not authorized.</p>
-  </div>
+    <div class="card">
+      <div class="confetti" aria-hidden="true"></div>
 
-  <div class="caption">
-    When your DAML contract compiles... but Canton says “No permission for you!” 😭
-  </div>
+      <div class="terminal" role="article" aria-label="meme terminal">
+        <div><span class="prompt">&gt; canton compile main.daml</span></div>
+        <div>Compiling...</div>
+        <div class="success">✅ Compilation successful.</div>
 
-  <div class="footer">
-    #CodeYourMeme @CantonNetwork  
-    <br>Created by <strong>@pakjiinvp059</strong> 🚀
+        <br>
+
+        <div><span class="prompt">&gt; canton run test</span></div>
+        <div class="error">❌ RuntimeError: Party not authorized.</div>
+      </div>
+
+      <div class="caption">
+        When your DAML contract compiles... but Canton says “No permission for you!” 😭
+      </div>
+
+      <div class="meta">
+        #CodeYourMeme @CantonNetwork &nbsp; · &nbsp; Created by <strong>@pakjiinvp059</strong> 🚀
+      </div>
+    </div>
+
+    <footer>
+      Tip: Press Ctrl+Shift+P → "Capture full size screenshot" in DevTools to export this meme as PNG for posting.
+    </footer>
   </div>
 </body>
 </html>
