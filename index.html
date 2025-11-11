@@ -1,31 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Canton Meme</title>
-<style>
-body {
-  background-color: #0e0e10;
-  color: #00ff90;
-  font-family: monospace;
-  padding: 50px;
-}
-pre {
-  background: #1a1a1d;
-  padding: 20px;
-  border-radius: 10px;
-}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Code Your Meme — Canton Network</title>
+
+  <!-- Social preview meta (Twitter/X) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="When your DAML contract compiles but prod says NO">
+  <meta name="twitter:description" content="My CodeYourMeme entry for Canton Network — dev life, DAML & Canton.">
+  <meta name="twitter:image" content="meme.png">
+
+  <style>
+    :root {
+      --bg: #0b0f14;
+      --card: #0f1720;
+      --accent: #00ffd8;
+      --muted: #bfc9d6;
+    }
+    html,body { height:100%; margin:0; }
+    body{
+      background: linear-gradient(180deg,#071225 0%,var(--bg) 100%);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color: var(--muted);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:32px;
+    }
+    .wrapper{
+      max-width:1000px;
+      width:100%;
+      text-align:center;
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:16px;
+      padding:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.6);
+    }
+    h1{ color:var(--accent); margin:0 0 12px 0; font-size:22px; }
+    .caption { color:#9fb0c8; margin-bottom:16px; font-size:14px; }
+    img.meme {
+      width:100%;
+      height:auto;
+      border-radius:12px;
+      max-height:600px;
+      object-fit:cover;
+      display:block;
+      margin:0 auto;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+    }
+    .meta {
+      margin-top:14px;
+      font-size:13px;
+      color:#9fb0c8;
+    }
+    .post-text {
+      margin-top:10px;
+      background:rgba(0,0,0,0.3);
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:10px;
+      color:#e6f7f1;
+      font-weight:600;
+    }
+    @media (max-width:600px){
+      body{ padding:12px; }
+      h1{ font-size:18px; }
+    }
+  </style>
 </head>
 <body>
-<h2>When you think your DAML contract is perfect...</h2>
-<pre>
-> canton compile main.daml
-Compiling...
-✅ Compilation successful.
-> canton run test
-💥 RuntimeError: Party not authorized.
-</pre>
-<p>#CodeYourMeme @CantonNetwork</p>
+  <div class="wrapper">
+    <div class="card">
+      <h1>🧑‍💻 Code Your Meme — Canton Network</h1>
+      <p class="caption">When your DAML contract compiles but production has other ideas. #CodeYourMeme @CantonNetwork</p>
+
+      <!-- img file must be meme.png in repo root -->
+      <img class="meme" src="meme.png" alt="Code Your Meme — DAML vs Production">
+
+      <div class="meta">
+        <div class="post-text">"When your DAML contract compiles but your tests still fail..."</div>
+        <div style="margin-top:10px;color:#93b1c4;font-size:12px">Author: @pakjiinvp059 · GitHub: pakjiinvp059</div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
