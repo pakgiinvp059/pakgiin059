@@ -1,90 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Code Your Meme — Canton Network</title>
-
-  <!-- Social preview meta (Twitter/X) -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="When your DAML contract compiles but prod says NO">
-  <meta name="twitter:description" content="My CodeYourMeme entry for Canton Network — dev life, DAML & Canton.">
-  <meta name="twitter:image" content="meme.png">
-
   <style>
-    :root {
-      --bg: #0b0f14;
-      --card: #0f1720;
-      --accent: #00ffd8;
-      --muted: #bfc9d6;
+    body {
+      background-color: #0e0e10;
+      color: #00ff90;
+      font-family: "Courier New", monospace;
+      margin: 0;
+      padding: 50px;
     }
-    html,body { height:100%; margin:0; }
-    body{
-      background: linear-gradient(180deg,#071225 0%,var(--bg) 100%);
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      color: var(--muted);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:32px;
+
+    .terminal {
+      background-color: #1a1a1d;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(0, 255, 150, 0.3);
     }
-    .wrapper{
-      max-width:1000px;
-      width:100%;
-      text-align:center;
+
+    .prompt {
+      color: #00ffaa;
     }
-    .card{
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border-radius:16px;
-      padding:20px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.6);
+
+    .error {
+      color: #ff5c5c;
+      font-weight: bold;
     }
-    h1{ color:var(--accent); margin:0 0 12px 0; font-size:22px; }
-    .caption { color:#9fb0c8; margin-bottom:16px; font-size:14px; }
-    img.meme {
-      width:100%;
-      height:auto;
-      border-radius:12px;
-      max-height:600px;
-      object-fit:cover;
-      display:block;
-      margin:0 auto;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+
+    .success {
+      color: #00ff90;
     }
-    .meta {
-      margin-top:14px;
-      font-size:13px;
-      color:#9fb0c8;
+
+    .caption {
+      margin-top: 40px;
+      font-style: italic;
+      color: #ccc;
+      text-align: center;
     }
-    .post-text {
-      margin-top:10px;
-      background:rgba(0,0,0,0.3);
-      display:inline-block;
-      padding:10px 14px;
-      border-radius:10px;
-      color:#e6f7f1;
-      font-weight:600;
+
+    .footer {
+      text-align: center;
+      color: #6fd1ff;
+      margin-top: 20px;
+      font-size: 14px;
     }
-    @media (max-width:600px){
-      body{ padding:12px; }
-      h1{ font-size:18px; }
+
+    h1 {
+      color: #00ffd5;
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 40px;
     }
   </style>
 </head>
 <body>
-  <div class="wrapper">
-    <div class="card">
-      <h1>🧑‍💻 Code Your Meme — Canton Network</h1>
-      <p class="caption">When your DAML contract compiles but production has other ideas. #CodeYourMeme @CantonNetwork</p>
+  <h1>🧑‍💻 Code Your Meme — Canton Network Challenge</h1>
 
-      <!-- img file must be meme.png in repo root -->
-      <img class="meme" src="meme.png" alt="Code Your Meme — DAML vs Production">
+  <div class="terminal">
+    <p class="prompt">&gt; canton compile main.daml</p>
+    <p>Compiling...</p>
+    <p class="success">✅ Compilation successful.</p>
+    <br>
+    <p class="prompt">&gt; canton run test</p>
+    <p class="error">❌ RuntimeError: Party not authorized.</p>
+  </div>
 
-      <div class="meta">
-        <div class="post-text">"When your DAML contract compiles but your tests still fail..."</div>
-        <div style="margin-top:10px;color:#93b1c4;font-size:12px">Author: @pakjiinvp059 · GitHub: pakjiinvp059</div>
-      </div>
-    </div>
+  <div class="caption">
+    When your DAML contract compiles... but Canton says “No permission for you!” 😭
+  </div>
+
+  <div class="footer">
+    #CodeYourMeme @CantonNetwork  
+    <br>Created by <strong>@pakjiinvp059</strong> 🚀
   </div>
 </body>
 </html>
